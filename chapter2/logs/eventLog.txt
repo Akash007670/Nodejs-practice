@@ -1,2 +1,0 @@
-27-12-2022 	 12:16:39 	 38adf57d-d348-41cd-a10c-6c0914aa1e81 	 Log event emitted.. 
-27-12-2022 	 12:17:06 	 99a1b9a7-b976-4ccd-98e1-0fa0c94b9def 	 Log event emitted.. 
