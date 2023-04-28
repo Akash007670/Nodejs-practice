@@ -1,0 +1,21 @@
+{
+  "name": "expressjs-tutorail",
+  "version": "1.0.0",
+  "description": "Expressjs tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Akash Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.23.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
