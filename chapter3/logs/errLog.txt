@@ -1,1 +1,3 @@
 20230430	01:57:46	54fe014d-065f-43bb-9f12-3e9bc8d2b1f0	Error Not Allowed By CORS
+20230501	16:18:58	d756ee93-2b34-489a-b62d-4852cc2b7c7d	Error ENOENT: no such file or directory, stat 'D:\dave-gray-nodejs\chapter3\routes\views\index.html'
+20230501	16:46:28	1468d652-8c0f-4b92-be7d-77c4067c00b2	TypeError req.json is not a function
