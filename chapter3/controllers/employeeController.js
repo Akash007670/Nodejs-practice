@@ -1,15 +1,29 @@
-const data = {};
-data.employees = require("../data/employees.json");
+const data = {
+  employees: require("../model/employees.json"),
+  setEmployees: function (data) {
+    this.employees = data;
+  },
+};
 
 const getAllEmployees = (req, res) => {
   res.json(data.employees);
 };
 
 const createNewEmployee = (req, res) => {
-  res.json({
+  const newEmployee = {
+    id: data.employees[data.employees.length - 1].id + 1 || 1,
     firstname: req.body.firstname,
     lastname: req.body.lastname,
-  });
+  };
+
+  if (!newEmployee.firstname || !newEmployee.lastname) {
+    return res
+      .status(400)
+      .json({ message: "First and Last name are required" });
+  }
+
+  data.setEmployees([...data.employees, newEmployee]);
+  res.status(201).json(data.employees);
 };
 
 const updateEmployee = (req, res) => {
