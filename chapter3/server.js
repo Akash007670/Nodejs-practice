@@ -3,6 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
+const corsOptions = require("./config/corsOptions");
 const app = express();
 const PORT = 3300;
 
@@ -14,18 +15,7 @@ app.use(logger);
 //Using cors:- Cross Origin Resource Sharing
 
 // creating whitelist where only given domain can access it.
-const whiteList = ["http://localhost:3300/"];
-const corsOption = {
-  origin: (origin, callback) => {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true); //null is usually the error and true is supposed to allowed to pass to cors from the given whitelist
-    } else {
-      callback(new Error("Not Allowed By CORS"));
-    }
-  },
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOption));
+app.use(cors(corsOptions));
 
 //Built in middleware to handle urlencoded data
 //In other words form data
@@ -42,6 +32,8 @@ app.use("/subdir", express.static(path.join(__dirname, "/public")));
 //Routes
 app.use("/", require("./routes/root"));
 app.use("/subdir", require("./routes/subdir"));
+app.use("/register", require("./routes/register"));
+app.use("/auth", require("./routes/auth"));
 app.use("/employees", require("./routes/api/employees"));
 
 //Trying to access page or route if not available will give page 404.
