@@ -32,6 +32,7 @@ app.use("/subdir", express.static(path.join(__dirname, "/public")));
 //Routes
 app.use("/", require("./routes/root"));
 app.use("/subdir", require("./routes/subdir"));
+app.use("/register", require("./routes/register"));
 app.use("/employees", require("./routes/api/employees"));
 
 //Trying to access page or route if not available will give page 404.

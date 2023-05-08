@@ -130,3 +130,6 @@
 20230502	15:54:32	8d126690-d092-4df0-b243-3821cca8109c	GET 	 undefined 	 /employees
 20230502	15:54:39	b3eee716-df35-44af-9ec0-2657fca903bb	POST 	 undefined 	 /employees
 20230502	15:54:45	44d1aa27-a5f5-4976-8531-7ba4668a8214	GET 	 undefined 	 /employees
+20230504	12:03:26	b42a687d-9d11-41b3-a5b6-ee2f390cb4fa	GET 	 undefined 	 /
+20230504	12:03:26	82e2d7cd-632e-498f-a9b0-945c56192088	GET 	 undefined 	 /css/style.css
+20230504	12:03:27	3cda2acb-bf70-4316-b871-50eef7993f82	GET 	 undefined 	 /favicon.ico
